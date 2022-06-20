@@ -1,1 +1,326 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    min-height: 100vh;
+}
+
+
+body {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    color: #fff;
+    background-color:hsl(226, 43%, 10%);
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.first-card {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr; /* cause there are three rows: profile-text-choices,
+    and they will take space equally */
+    grid-template-columns: 1fr; /*ONLY one column */
+    background-color: hsl(235, 46%, 20%) ;
+    border-radius: 10px;
+    /* i can use rem, whats the meaning of rem?
+    1rem therefore takes on the value which
+    is given to the font-size of the root element.
+    */
+    height:7rem;
+    width:15rem;
+    margin-left:25px;
+    margin-top: 15px
+}
+
+.profile-img {
+    max-width: 2.5rem;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    justify-self: end;
+}
+
+.profile {
+    background-color: hsl(246, 80%, 60%);
+    display: grid;
+    grid-row: 1/3;
+    grid-template-columns: 1fr 2fr;
+    align-items:center;
+    justify-items:center;
+    grid-gap: 0.8rem;
+    border-radius: 0.7rem;
+}
+
+.text {
+    justify-self:start;
+    line-height: 1.2rem;
+}
+.text p {
+    color: #fff;
+    font-size: .8em;
+}
+
+.text h3{
+    font-weight: 300;
+    font-size: 1.5em;
+}
+
+.choices {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    font-size: small;
+    color: rgba(255, 255, 255, 0.5);
+}
+.active {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.second-card, .third-card, .fourth-card, .fifth-card, .sixth-card, .seventh-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    border-radius: 10px;
+    height:6rem;
+    width:15rem;
+    margin-left:25px;
+    margin-top: 15px;
+    background-color: hsl(235, 46%, 20%);
+}
+.third-card .logo-part, .fourth-card .logo-part, .fifth-card .logo-part, .sixth-card, .logo-part, .seventh-card .logo-part  {
+    display: grid;
+    grid-row: 1/3;
+    border-radius: 10px;
+    height: 35px;
+}
+.second-card .logo-part {
+    background-color:hsl(15, 100%, 70%)
+}
+.third-card .logo-part {
+    background-color: hsl(195, 74%, 62%);
+}
+
+.fourth-card .logo-part {
+    background-color: hsl(348, 100%, 68%);
+}
+.fifth-card .logo-part {
+    background-color: hsl(145, 58%, 55%);
+}
+
+.sixth-card .logo-part {
+    background-color:hsl(264, 64%, 52%);
+}
+.seventh-card.logo-part {
+  background-color: hsl(43, 84%, 65%);
+}
+
+.logo-part {
+    display: grid;
+    grid-row: 1/3;
+    background-color: hsl(43, 84%, 65%);
+    border-radius: 10px;
+    height: 35px;
+}
+.logo-part img {
+    max-width: 2.5rem;
+    margin-left: 180px;
+    width: 30px;
+    margin-top: 7px;
+}
+.second-part{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 10px;
+}
+.partOne {
+    display: grid;
+    font-weight: 500;
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 10px;
+    height: 38px;
+}
+.partTwo {
+    background-color: hsl(235, 46%, 20%) ;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 10px;
+}
+.partOne img {
+    display: grid;
+    grid-row: 1/2;
+   margin-left: 180px;
+    position: relative;
+    top: -12px;
+
+}
+.title{
+margin-top: 15px;
+margin-left: 10px;
+    font-weight: bold;
+}
+.hours {
+    grid-row: 1/2;
+    font-size: 18px;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+.description {
+    grid-row: 1/2;
+    color: lightgray;
+    font-size: 10px;
+    margin-top: 9px;
+    margin-left: 10px;
+}
+
+.attribution {
+    font-size: 11px;
+    margin-left: 15px;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 570px) {
+    .contanier {
+        width: 800px;
+        display: flex;
+    }
+
+    .first-section {
+        padding: 1.5em;
+        border-radius:10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .second-section {
+        margin-top: 105px;
+        flex-grow: 1;
+        display: grid;
+        width: 300px;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 0.5px;
+    }
+
+    .second-card ,  .third-card, .fourth-card, .fifth-card, .sixth-card, .seventh-card{
+    grid-column: 1/2;
+        grid-row:1/2 ;
+        height: 130px;
+        width: 122px;
+    }
+    .logo-part {
+        height: 25px;
+        width: 120px;
+    }
+    .logo-part img {
+        max-width: 1.2rem;
+        margin-left: 80px;
+        width: 30px;
+        margin-top: 7px;
+    }
+    .fifth-card .logo-part img {
+        max-width: 1.5rem;
+        margin-top: 10px;
+    }
+    .sixth-card .logo-part img {
+        margin-top: 5px;
+    }
+    .partOne img {
+        margin-left: 90px;
+    }
+    .partTwo{
+        position: relative;
+        top: -15px;
+    }
+    .title {
+        font-size: 10px;
+    }
+    .hours {
+        font-size: 23px;
+    }
+    .description {
+        grid-row: 2/3;
+        font-size: 6px;
+    }
+     .fourth-card .description  , .fifth-card .description, .sixth-card .description, .seventh-card .description{
+        font-size: 5px;
+    }
+    .third-card {
+        grid-column: 2/3;
+        grid-row:1/2 ;
+    }
+    .fourth-card {
+        grid-column: 3/4;
+        grid-row:1/2 ;
+    }
+    .fifth-card {
+        grid-column: 1/2;
+        grid-row:2/2 ;
+    }
+    .sixth-card {
+        grid-column: 2/3;
+        grid-row:2/2 ;
+    }
+    .seventh-card {
+        grid-column: 3/4;
+        grid-row:2/2 ;
+    }
+
+    .first-card {
+        height:18rem;
+        width: 12rem;
+    }
+    .profile-img {
+        margin-right: 130px;
+        justify-self: end;
+    }
+    .profile {
+        background-color: hsl(246, 80%, 60%);
+        display: grid;
+        grid-template-columns: 1fr;
+        border-radius: 0.7rem;
+        height: 12rem;
+    }
+    .text {
+        margin-left: 30px;
+        margin-bottom: 20px;
+    }
+    .text p {
+        font-size: .8em;
+        color: #fff;
+    }
+   .choices {
+       display: block;
+       padding: 1.5em 2.5em;
+       margin: .2em 0;
+       color: rgba(255, 255, 255, 0.5);
+       height: 500px;
+   }
+    .choices p  {
+        margin-bottom: 3px;
+        padding-bottom: 4px;
+    }
+    .choices p .active {
+        color: rgba(255, 255, 255, 0.9);
+    }
+    .attribution {
+        position: relative;
+        right: 200px;
+        bottom: 100px;
+
+
+    }
+
+}
+
+
 
